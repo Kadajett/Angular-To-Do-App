@@ -1,0 +1,23 @@
+<div class="panel panel-default">
+  <div class="panel-heading">
+    <h2>Todo List</h2>
+  </div>
+  <div class="panel-body">
+    <ul>
+	<li ng-repeat="todo in todoList">
+		<h4>{{todo.name}}</h4>
+		<button ng-click="deleteTodo($index)" > Delete Todo</button>
+	</li> 
+</ul>
+<form  method="POST" role="form">
+	<legend>Add a todo</legend>
+	<div class="form-group">
+		<label for="todoInput">Todo Input</label>
+		<input type="text" name="todoInput" class="form-control" ng-model="todoInput" id="addTodo" placeholder="Todo Text">
+	</div>
+	<button type="submit" ng-click="addTodo()" class="btn btn-primary">Submit</button>
+</form>	
+  </div>
+</div>
+
+
